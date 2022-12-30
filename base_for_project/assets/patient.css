@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body
+  {
+      background-image:url(henry-co--odUkx8C2gg-unsplash.jpg);
+      background-size:cover;
+      background-position: center;
+      
+  }
+  #form{
+    background-color:#000;
+    height: 550px;
+    width:800px;
+    margin: auto;
+    margin-top: 100px;
+    opacity: 0.7;
+  
+  }
+  
+   #first-group{
+    border:none;
+    width:400px;
+    margin-top: 38px;
+    position: absolute;
+   }
+   #content{
+    border: 1px solid #fff;
+    margin:10px;
+    margin-left: 8px;
+    padding:5px;
+  }
+  #content #input-group{
+    border:none;
+    outline:none;
+    background: transparent;
+    margin-left:8px;
+    width:300px;
+    color:#fff;
+  }
+  ::placeholder{
+    color:#fff;
+  }
+  .fa{
+    display:inline-block;
+    color:red;
+    border-right:1px solid #fff;
+    padding:8px;
+    margin-left: 8px;
+  }
+  #second-group{
+    border:none;
+    width:400px;
+    margin-top: 55px;
+    margin-left:400px;
+  }
+  #submit-btn{
+    margin-top: 30px;
+    margin-left: 600px;
+    background: transparent;
+    color:#fff;
+    width:150px;
+    border:1px solid red;
+    outline:none;
+    padding:10px;
+    font-size: 20px;
+  } 
+  navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar  a{
+    text-decoration: none;
+    color: snow;
+    text-transform: uppercase;
+  }
+  .navbar ::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: red;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+  }
+  .navbar :hover::after{
+    width: 100%;
+  }
+  .navbar {
+    list-style: none;
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+  }

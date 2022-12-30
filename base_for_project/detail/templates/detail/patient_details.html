@@ -1,0 +1,30 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'design.css'%}">
+</head>
+<body>
+    {% for dets in patients %}
+    <div class="patient-detail">
+        <div class="patient">
+            <p>{{dets.first_name}}</p>
+            <p>{{dets.last_name}}</p>
+            <p>{{dets.middle_name}}</p>
+            <p>{{dets.address}}</p>
+            <p>{{dets.date_of_birth}}</p>
+            <p>{{dets.age}}</p>
+            <p>{{dets.assigned_doctor}}</p>
+            <p>{{dets.patient_type}}</p>
+            <p>{{dets.patient_phone_number}}</p>
+            <p>{{dets.condition_of_complaint}}</p>
+            <p>{{dets.get_age}}</p>
+        </div>
+    </div>
+    {% endfor%}
+</body>
+</html>

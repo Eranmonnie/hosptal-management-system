@@ -1,0 +1,54 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'splash.css'%}">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>WELCOME TO MEDPLUS</h1>
+        </div>
+    </header>
+    <main>
+        
+        <div class="box">
+            <form action="{% url 'login' %}" method = "POST" class="login">
+            <p>LOG IN DOCTOR</p>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor%}
+            <div>
+                {% csrf_token %}
+                    <input type="text"  placeholder="Username" name="username" />
+
+                    <input type="password"  placeholder="Password" name="password" />
+            
+                    <input type="submit" name="submit">
+
+                    {% if request.GET.next %}
+
+                        <input type="hidden" name="next" value="{{request.GET.next}}">
+
+                    {% endif %}
+            </div>
+            </form>
+            If you don't have an existing account <a href="{% url 'regdoc'%}">click here</a>, 
+            
+        </div>
+
+    </main>
+
+    <footer>"prevention is better than cure" - Akinlesi Favour</footer>
+</body>
+
+
+
+</html>

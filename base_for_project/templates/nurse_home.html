@@ -1,0 +1,42 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'log.css'%}">
+</head>
+<body>
+    
+
+    <div class="banner">
+        <div class="navbar">
+            <a href="#"></a>
+            <!--<img src="#" class="logo">-->
+           
+        </div>
+
+        
+
+    <div class="content">
+        <h1>HOW MAY WE HELP YOU</h1>
+        <P>Choose one of the options bellow</P>
+        <div>
+            <button type="button"><span></span><a href="{%url 'nurse_d'%}" class="tour">CREATE PROFILE</a></button>
+            <button type="button"><span></span><a href="{%url 'nurse_det'%}"class="tour">PROFILE</a></button>
+            {% if user.is_authenticated %}
+
+            <form class="logout-link" action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit"><span></span> <a href="" class="tour">Logout</a></button>
+            </form>
+        {% endif %}
+
+        </div>
+    </div>
+   </div> 
+   
+</body>
+</html>
